@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Abdelrhman Islam | CIB Internship">
+  <meta name="author" content="Abdelrhman Islam">
+  <link rel="icon" href=" icon.png ">
+  <title>Abdelrhman Islam | CIB Internship</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <style>
+
+    :root {
+      --primary: #2193b0;
+      --secondary: #6dd5ed;
+      --light-bg: #f9f9f9;
+      --dark-bg: #121212;
+      --dark-text: #ffffff;
+      --light-text: #222;
+      --hero-light-gradient: linear-gradient(to right, #2193b0, #6dd5ed, #00d0ff );
+      --hero-dark-gradient: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    }
+
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+}
+
+    body {
+      background:#8ee8ff;
+      color: var(--light-text);
+      animation: bgShift 15s infinite alternate;
+    }
+
+    body::selection{
+  color: rgb(255, 221, 0);
+  background-color: rgb(95, 90, 255);
+}
+
+    @keyframes bgShift {
+      0% { background-position: 0% 50%; }
+      100% { background-position: 100% 50%; }
+    }
+
+    body.dark-mode {
+      background: var(--dark-bg);
+      color: var(--dark-text);
+    }
+
+  body.dark-mode::selection{
+    color: #171717;
+    background-color: rgb(0, 255, 255);
+  }
+
+    .hero {
+      height: 100vh;
+      background: var(--hero-light-gradient);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      padding: 2rem;
+      transition: background 0.5s ease;
+    }
+
+    body.dark-mode .hero {
+      background: var(--hero-dark-gradient);
+    }
+
+    .hero h1 {
+      font-size: 3.5rem;
+      margin-bottom: 1rem;
+      font-weight: bold;
+      animation: colorChange 5s infinite linear;
+    }
+
+    @keyframes colorChange {
+      0% { color: #00fbd2; }
+      25% { color: #ff4e6b; }
+      50% { color: #00ff9d; }
+      75% { color: #ff086f; }
+      100% { color: #00fbd2; }
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin-bottom: 2rem;
+      animation: fadeIn 1.5s ease-in;
+    }
+
+    .dark-mode .hero p{
+      color: var(--primary);
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin-bottom: 2rem;
+      animation: fadeIn 1.5s ease-in;
+    }
+
+    .hero p:hover{
+      color: hotpink;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .dark-mode .hero p:hover{
+      color: var(--secondary);
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .hero a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+      padding: 10px 20px;
+      border: 2px solid white;
+      border-radius: 30px;
+      font-weight: bold;
+      transition: 0.3s;
+      box-shadow: 0 0 10px rgb(0, 255, 179);
+    }
+
+    .dark-mode .hero a{
+      color: var(--primary);
+      text-decoration: none;
+      margin: 0 10px;
+      padding: 10px 20px;
+      border: 2px solid var(--secondary);
+      border-radius: 30px;
+      font-weight: bold;
+      transition: 0.3s;
+      box-shadow: 0 0 10px #13fbff;
+    }
+
+    .hero a:hover {
+      background: white;
+      color: var(--primary);
+      transform: scale(1.1);
+      box-shadow: 0 0 10px #005a5b;
+    }
+
+    .dark-mode .hero a:hover{
+      background: var(--secondary);
+      color: white;
+      transform: scale(1.1);
+      box-shadow: 0 0 15px rgb(0, 255, 221);
+    }
+
+    .toggle-theme {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: var(--secondary);
+      border: none;
+      padding: 10px 15px;
+      border-radius: 30px;
+      cursor: pointer;
+      font-size: 16px;
+      z-index: 999;
+      transition: background 0.3s ease;
+      box-shadow: 0 0 10px rgb(0, 106, 255);
+    }
+
+    .dark-mode .toggle-theme {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: var(--primary);
+      border: none;
+      padding: 10px 15px;
+      border-radius: 30px;
+      cursor: pointer;
+      font-size: 16px;
+      z-index: 999;
+      transition: background 0.3s ease;
+      box-shadow: 0 0 10px #00fbd2;
+    }
+
+    .toggle-theme:hover {
+      background: #00fff2;
+    }
+
+    .dark-mode .toggle-theme:hover {
+      background: #00434b;
+    }
+
+    #scrollProgress {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 6px;
+      width: 0%;
+      z-index: 9999;
+      border-radius: 0 5px 5px 0;
+      background: linear-gradient(90deg, #ff086f, #ff4e6b, #ff758c, #00fbd2);
+      background-size: 300%;
+      animation: gradientAnimation 2s ease infinite;
+    }
+
+    @keyframes gradientAnimation {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+      animation: fadeInUp 1s ease-in;
+      display: block; 
+      text-align: center; 
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: var(--primary);
+      cursor: pointer;
+    }
+
+    .section h2:hover{
+      cursor: pointer;
+      color: #00a7f4;
+    }
+
+    .dark-mode .section h2:hover{
+      cursor: pointer;
+      color: #34ddff;
+    }
+
+    .card {
+      background: rgba(135, 207, 255, 0.737);
+      box-shadow: 0 0 12px rgb(255, 255, 255);
+      padding: 20px;
+      border-radius: 20px;
+      margin: 20px auto 0 auto;
+      display: none;
+      animation: fadeIn 1s ease-in;
+      width: 50%;
+      text-align: center; 
+    }
+
+    .card:hover {
+      background-color: #00d1fb;
+      box-shadow: 0 0 20px hotpink;
+      transform: scale(1.05);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .dark-mode .card {
+      background-color: #1e1e1e ;
+      box-shadow: 0 0 12px rgb(0, 191, 255);
+      padding: 20px;
+      border-radius: 20px;
+      margin: 20px auto 0 auto;
+      display: none;
+      animation: fadeIn 1s ease-in;
+    }
+
+    .dark-mode .card:hover {
+      background-color: #0d3d4d;
+      box-shadow: 0 0 20px #00fff2;
+      transform: scale(1.05);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .card a {
+      text-decoration: none;
+      color: var(--primary);
+      font-weight: bold;
+    }
+
+    .card a:hover{
+      color: #ff7eb3;
+    }
+
+    .dark-mode .card a{
+      text-decoration: none;
+      color: #2193b0;
+      font-weight: bold;
+    }
+
+    .dark-mode .card a:hover{
+      color: #00fff2;
+    }
+
+    .card p{
+      padding: 4px;
+    }
+
+    .about-me {
+      background: #6fd2ff8a;
+      text-align: center;
+      animation: fadeInUp 2s ease-in;
+      border-radius: 20px;
+      box-shadow: 0 0 12px rgb(255, 255, 255);
+      margin: 10px 10px;
+      padding: 15px;
+    }
+
+    .about-me:hover{
+      background-color: #2193b07a;
+      box-shadow: 0 0 20px hotpink;
+      transition: transform 0.2s ease-in-out;
+    }
+
+    .dark-mode .about-me{
+      background-color: #1e1e1e ;
+      text-align: center;
+      animation: fadeInUp 2s ease-in;
+      border-radius: 20px;
+      box-shadow: 0 0 12px rgb(0, 191, 255);
+      margin: 10px 10px;
+    }
+
+    .dark-mode .about-me:hover{
+      background-color:#0d3d4d;
+      box-shadow: 0 0 20px #00fff2;
+      transition: transform 0.2s ease-in-out;
+    }
+
+    .about-me h2 {
+      color: #00b3ff;
+    }
+
+    .about-me h2:hover {
+      color: #0080a3;
+    }
+
+    .dark-mode .about-me h2 {
+      color: #0086a8;
+    }
+
+    .dark-mode .about-me h2:hover{
+      color: #13fbff;
+    }
+
+    .about-me p{
+      color: white;
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      animation: fadeIn 1.5s ease-in;
+    }
+
+    .about-me p:hover{
+      color: hotpink;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .dark-mode .about-me p{
+      color: var(--primary);
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      animation: fadeIn 1.5s ease-in;
+    }
+
+    .dark-mode .about-me p:hover{
+      color: var(--secondary);
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .social-links a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+      border: 2px solid white;
+      border-radius: 30px;
+      font-weight: bold;
+      transition: 0.3s;
+      box-shadow: 0 0 10px rgb(0, 255, 179);
+      padding: 10px;
+    }
+
+    .dark-mode .social-links a{
+      color: var(--primary);
+      text-decoration: none;
+      margin: 0 10px;
+      border: 2px solid var(--secondary);
+      border-radius: 30px;
+      font-weight: bold;
+      transition: 0.3s;
+      box-shadow: 0 0 10px #13fbff;
+      padding: 10px;
+    }
+
+    .social-links a:hover {
+      background: white;
+      color: var(--primary);
+      transform: scale(1.1);
+      box-shadow: 0 0 10px #005a5b;
+    }
+
+    .dark-mode .social-links a:hover{
+      background: var(--secondary);
+      color: white;
+      transform: scale(1.1);
+      box-shadow: 0 0 15px rgb(0, 255, 221);
+    }
+
+    footer {
+      text-align: center;
+      padding: 3px;
+      background: linear-gradient(270deg, #2193b0, #6dd5ed, #ff758c, #ff7eb3);
+      background-size: 400% 400%;
+      animation: gradientAnimation 4s ease infinite;
+      color: white;
+      font-size: 10px;
+      font-weight: bold;
+      margin-top: 50px;
+      border-radius: 30px 30px 0 0;
+      width: 98%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    footer:hover{
+      font-size: 15px;
+      cursor: pointer;
+      color: rgb(0, 157, 254);
+    }
+
+    .dark-mode footer{
+      color: #005064;
+    }
+
+    .dark-mode footer:hover{
+      font-size: 15px;
+      cursor: pointer;
+      color: #000000;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <div id="scrollProgress"></div>
+  
+  <button class="toggle-theme" onclick="toggleTheme()">🌓</button>
+
+  <div class="hero">
+    <h1>Abdelrhman Islam</h1>
+    <p>
+      Welcome I'm Abdelrhman Islam intern at CIB Bank.
+      This site contains all the materials and resources from the CIB Internship program.
+      made by me and it is not official website I make it to help anyone in the internship.
+    </p>
+    <div>
+      <a href="https://linkedin.com/in/abdelrhman-islam-565747317" target="_blank"> <i class="fab fa-linkedin"></i> </a>
+      <a href="https://www.youtube.com/channel/UCSuSrTeBKb7AZaAhmb4lFsg" target="_blank"> <i class="fab fa-youtube"></i> </a>
+      <a href="https://abdelrhmanislam.github.io/my_portfolio/" target="_blank">  <i class="fas fa-globe"></i> </a>
+    </div>
+  </div>
+
+  <div class="section">
+  <h2 class="week-title" onclick="toggleContent(this)">
+  <span class="icon">📘</span> Week 1 Materials
+  </h2>
+
+    <div id="week1" class="card">
+      <p> <a href="https://drive.google.com/file/d/1z8J0aLYrUV3TP30pOgoEyJvVnXwXE94F/view?usp=sharing" target="_blank"> Day One </a> </p>
+      <p> <a href="https://drive.google.com/file/d/1UH60UFrcFBtcbNZGAJ0gXFn3AYCc72CS/view?usp=sharing" target="_blank"> Day Two </a> </p>
+      <p> <a href="https://drive.google.com/file/d/15Qk1wrfqMQa5iQhqz6cFe3OOJgUX2fsQ/view?usp=sharing" target="_blank"> Day Three </a> </p>
+      <p> <a href="https://drive.google.com/file/d/15Lv3K704h1aOd_78NYjPmqsKypQNdSwY/view?usp=sharing" target="_blank"> Day Four </a> </p>
+      <p> <a href=" https://drive.google.com/file/d/19fB2C647-fy5-mkFt-9DrbuDatcFFWIY/view?usp=sharing " target="_blank"> Day Five </a> </p>
+    </div>
+  </div>
+
+  <div class="section">
+  <h2 class="week-title" onclick="toggleContent(this)">
+  <span class="icon">📘</span> Week 2 Materials
+  </h2>
+    <div id="week2" class="card">
+      <p> <a href=" https://drive.google.com/file/d/1ZCxbrfeSKH1nmK7dUkjT8w5vZCA4Fanj/view?usp=sharing " target="_blank"> Day One </a> </p>
+      <p> <a href=" https://drive.google.com/file/d/1iN-K0CZysjHanVjm055In8VVgrKYBfuG/view?usp=sharing " target="_blank"> Day Two </a> </p>
+      <p> <a href="  https://drive.google.com/file/d/1afJBw_6XgkInpLbgVP4bDzjd9RuQzgha/view?usp=sharing " target="_blank"> Day Three </a> </p>
+      <p> <a href="  https://drive.google.com/file/d/1C8ENPMhMEyM7ZukOexc0Ie5qkR7nfWyK/view?usp=sharing " target="_blank"> Day Four </a> </p>
+    </div>
+  </div>
+
+  <div class="section">
+  <h2 class="week-title" onclick="toggleContent(this)">
+  <span class="icon">📘</span> Week 3 Materials
+  </h2>
+    <div id="week3" class="card">
+      <p> <a href=" https://drive.google.com/file/d/1g3nZWP4steQS1aHGG1iNqQ96dA40iPV6/view?usp=sharing " target="_blank"> Day One </a> </p>
+      <p> <a href="  https://drive.google.com/file/d/1Rdj4D3rAbfq2YMuLq4OUXtPkIhp9d2OD/view?usp=sharing " target="_blank"> Day Two </a> </p>
+      <p> <a href=" https://drive.google.com/file/d/1jFz7YouWtMk3C2SYP4mBz8tM0xnpE5qj/view?usp=sharing " target="_blank"> Day Three </a> </p>
+      <p> <a href=" https://drive.google.com/file/d/1rVko0ZeVthq_koBZ6TCXx94Wm4FFLLSz/view?usp=sharing  " target="_blank"> Day Four </a> </p>
+    </div>
+  </div>
+
+<div class="about-me">
+  <h2 id="my-name" > <span id="emoji">👨‍💻</span> About Me</h2>
+  <p><span>I'm Abdelrhman Islam</span>, intern at CIB Bank. I love web development, cybersecurity, and sharing knowledge with others.</p>
+  <div class="social-links">
+    <a href="https://linkedin.com/in/abdelrhman-islam-565747317" target="_blank"><i class="fab fa-linkedin"></i></a>
+    <a href="https://abdelrhmanislam.github.io/my_portfolio/" target="_blank"><i class="fas fa-globe"></i></a>
+    <a href="https://www.youtube.com/channel/UCSuSrTeBKb7AZaAhmb4lFsg" target="_blank"><i class="fab fa-youtube"></i></a>
+    <a href="https://github.com/AbdelrhmanIslam" target="_blank"><i class="fab fa-github"></i></a>
+    <a href="https://www.facebook.com/people/%D8%B9%D8%A8%D8%AF%D8%A7%D9%84%D8%B1%D8%AD%D9%85%D9%86-%D8%A7%D8%B3%D9%84%D8%A7%D9%85/pfbid02n9FzuPrb9LfJarbMHArbKxxUEzREgr5E3kpBRZHftDusmmuNqHP1KRe33fp1CTwal/" target="_blank"><i class="fab fa-facebook"></i></a>
+  </div>
+</div>
+
+  <footer>
+    &copy; 2025 Abdelrhman Islam - CIB Internship
+  </footer>
+
+  <script>
+
+    function toggleTheme() {
+      document.body.classList.toggle("dark-mode");
+    }
+
+    function toggleWeek(id) {
+      const section = document.getElementById(id);
+      section.style.display = section.style.display === "block" ? "none" : "block";
+    }
+
+    window.onscroll = function () {
+      const scrollProgress = document.getElementById("scrollProgress");
+      const totalHeight = document.body.scrollHeight - window.innerHeight;
+      const progress = (window.scrollY / totalHeight) * 100;
+      scrollProgress.style.width = progress + "%";
+    };
+
+    function toggleContent(element) {
+    const card = element.nextElementSibling;
+    const icon = element.querySelector('.icon');
+
+    if (card.style.display === 'block') {
+      card.style.display = 'none';
+      icon.textContent = '📘'; 
+    } else {
+      card.style.display = 'block';
+      icon.textContent = '📂';
+    }
+  }
+
+  const name = document.getElementById("my-name");
+  const emoji = document.getElementById("emoji");
+
+  name.addEventListener("mouseenter", () => {
+    emoji.textContent = "😎"; 
+  });
+
+  name.addEventListener("mouseleave", () => {
+    emoji.textContent = "👨‍💻"; 
+  });
+
+  </script>
+
+</body>
+
+</html>
