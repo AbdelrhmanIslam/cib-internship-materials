@@ -1,56 +1,4 @@
-CIB Internship Hub: A Centralized Resource Platform
-Welcome to the CIB Internship Hub, an unofficial, voluntary project developed by Abdelrhman Islam to support fellow trainees during the CIB Summer Internship program. This interactive web platform was built to centralize all essential training materials, important links, and helpful resources into one easily accessible and user-friendly location.
-
-🚀 View the Live Demo Here 🚀
-✨ Key Features
-This platform is packed with features designed to enhance the learning experience and provide seamless access to information.
-
-Dynamic & Interactive UI
-🎨 Dual-Theme Mode: Instantly switch between a sleek Light Mode and a comfortable Dark Mode using the 🌓 toggle to reduce eye strain.
-
-🎬 Smooth Animations: Built with the AOS (Animate On Scroll) library, elements elegantly fade in as you scroll, creating a modern and engaging user experience.
-
-** interactive Hover Effects:** Buttons, links, and cards come to life with subtle scaling, color shifts, and shadow effects on hover.
-
-Dynamic Emoji: The emoji in the "About Me" section cleverly changes upon mouse interaction, adding a small, delightful touch.
-
-Smart Content Organization
-📚 Collapsible Weekly Modules: All training materials are neatly organized into expandable sections by week. Simply click on a week's title (e.g., 📘 Week 1 Materials) to reveal or hide its content, keeping the interface clean and uncluttered.
-
-** multimedia Integration:** Includes embedded YouTube videos for visual tutorials and direct links to Google Drive files for presentations and documents.
-
-🔗 Centralized Links: A dedicated section consolidates all crucial external links, including professional development courses on LinkedIn Learning & Udemy, official portals like ciboat, and attendance registration pages.
-
-Enhanced User Experience
-📊 Real-time Scroll Progress Bar: A vibrant, gradient progress bar at the top of the page visually tracks your scrolling progress, so you always know how far you've navigated.
-
-📱 Fully Responsive Design: The layout is optimized for a seamless experience across all devices, from desktops and laptops to tablets and smartphones.
-
-🌐 Cross-Browser Compatibility: Ensures consistent performance and appearance on modern web browsers.
-
-🛠️ Tech Stack & Libraries
-This project was built using a modern frontend stack to ensure performance, scalability, and a rich user experience.
-
-Core Technologies:
-
-HTML5: For structuring the web content.
-
-CSS3: For custom styling, animations, and responsive design. Utilizes Flexbox, Custom Properties (Variables), and Keyframe Animations.
-
-JavaScript (ES6): For all client-side logic, including theme switching, DOM manipulation, and event handling.
-
-External Libraries & APIs:
-
-Font Awesome: For a rich set of high-quality icons.
-
-Google Fonts: For the modern 'Poppins' typeface.
-
-AOS (Animate On Scroll): For beautiful on-scroll animations.
-
-👨‍💻 About The Developer
-I'm Abdelrhman Islam, a passionate Cybersecurity student with hands-on experience in web development and multiple programming languages. I created this project to apply my skills in a practical way and to help my peers succeed in their internship journey.
-
-Let's connect!
+# Abdelrhman Islam - CIB Internship Resources
 
 <div align="left">
 <a href="https://linkedin.com/in/abdelrhman-islam-565747317" target="_blank">
@@ -64,7 +12,63 @@ Let's connect!
 </a>
 </div>
 
-📄 License
-This project is open-source and available under the MIT License. See the LICENSE file for more details.
+## 🌟 Overview
+This is a personal project created by Abdelrhman Islam to share resources and materials from the CIB Bank internship program. The website features a clean, interactive design with light/dark mode toggle and animated elements.
 
-This is a personal, non-commercial project and is not officially affiliated with CIB.
+## 🎨 Features
+- **Responsive Design**: Works on all devices
+- **Dark/Light Mode**: Toggle with the moon/sun button
+- **Animated Elements**: Smooth transitions and hover effects
+- **Progress Bar**: Shows scroll progress
+- **Interactive Cards**: Click to expand weekly materials
+- **Social Media Integration**: Quick links to connect
+
+## 📂 Resources Structure
+
+### Week 1 Materials
+- [Day One](https://drive.google.com/file/d/1z8J0aLYrUV3TP30pOgoEyJvVnXwXE94F/view?usp=sharing)
+- [Day Two](https://drive.google.com/file/d/1UH60UFrcFBtcbNZGAJ0gXFn3AYCc72CS/view?usp=sharing)
+- [Day Three](https://drive.google.com/file/d/15Qk1wrfqMQa5iQhqz6cFe3OOJgUX2fsQ/view?usp=sharing)
+- [Day Four](https://drive.google.com/file/d/15Lv3K704h1aOd_78NYjPmqsKypQNdSwY/view?usp=sharing)
+- [Day Five](https://drive.google.com/file/d/19fB2C647-fy5-mkFt-9DrbuDatcFFWIY/view?usp=sharing)
+
+### Week 2 Materials
+- [Day One]
+- [Day Two]
+- [Day Three]
+- [Day Four]
+### Week 3 Materials
+- [Day One]
+- [Day Two]
+- [Day Three]
+- [Day Four]
+
+### 🎥 Tutorials
+- [How to create SASS account (YouTube)]
+- [SASS account PDF guide]
+### 🔗 Important Links
+- [Sustainability Foundations (LinkedIn)]
+- [How AI intersects with Sustainability]
+- [Customer Centricity (Udemy)]
+- [Why innovation matters (Udemy)]
+- [Central Bank of Egypt certificate](https://www.youtube.com/watch?v=eyZEc8gt9nk)
+- [Courses certification playlist](https://www.youtube.com/playlist?list=PLPA6D5lLRjPKXKXHw4lAe0hDOJk_0D8G6)
+- [CIBOAT]
+- [Attendance link]
+
+## 👨‍💻 About the Creator
+Abdelrhman Islam is a cybersecurity student with experience in:
+- Programming: Python, JavaScript, PHP, C#, C++, Java
+- Front-end: HTML, CSS, JavaScript
+- Back-end: PHP
+
+Connect with me:
+- [LinkedIn](https://linkedin.com/in/abdelrhman-islam-565747317)
+- [Portfolio Website](https://abdelrhmanislam.github.io/my_portfolio/)
+- [YouTube](https://www.youtube.com/channel/UCSuSrTeBKb7AZaAhmb4lFsg)
+- [GitHub](https://github.com/AbdelrhmanIslam)
+
+## 💙 Note
+This is not an official CIB website but a personal project created to help fellow trainees. Please share it with anyone who might benefit from these resources!
+
+© 2025 Abdelrhman Islam - CIB Internship
